@@ -1,0 +1,35 @@
+# Guia de Demonstração: Como Impressionar na Aula 🚀
+
+Agora que o projeto tem um visualizador em tempo real, aqui está o roteiro sugerido para a sua apresentação.
+
+## 1. O "Uau" Instantâneo (Documentação)
+Comece abrindo o link: `http://localhost:8000/docs`
+- **O que dizer**: "Vejam como o FastAPI é poderoso. Ele criou uma documentação interativa completa só de lermos o nosso código Python. Podemos testar as rotas direto por aqui!"
+
+## 2. O Dashboard Interativo (Frontend)
+Abra o [index.html](file:///c:/Users/hian.almeida/Desktop/minicursoapis/index.html).
+- **O que dizer**: "Este é o nosso painel. Ele está conectado ao nosso servidor Python."
+- **Ação**: Adicione uma nova tarefa (ex: "Tomar Café").
+- **Destaque**: Mostre o campo **"Visualizador de Dados"** lá embaixo.
+- **O que dizer**: "Vejam que o JSON mudou na hora! Isso é exatamente o que o Python está respondendo para o nosso JavaScript."
+
+## 3. O "Raio-X" da Web (Network Tab)
+Pressione `F12` e vá na aba `Network` (Rede).
+- **Ação**: Marque ou desmarque uma tarefa como concluída.
+- **Destaque**: Clique na requisição que apareceu (provavelmente um `PUT`).
+- **O que dizer**: "Aqui vemos os dados saindo do navegador e indo para o servidor. É assim que a internet funciona: pacotes de dados viajando para lá e para cá."
+
+## 4. O Código Vivo
+Mostre rapidamente o [script.js](file:///c:/Users/hian.almeida/Desktop/minicursoapis/script.js) e o [main.py](file:///c:/Users/hian.almeida/Desktop/minicursoapis/backend/main.py) lado a lado.
+- **O que dizer**: "No final, é tudo sobre conversas. O JavaScript pergunta (GET), e o Python responde (JSON). É uma linguagem universal."
+
+---
+
+## Prints do Resultado Final
+*(Nota: Você pode tirar prints da sua tela com o Terminal e o Navegador abertos para anexar ao seu material de apoio)*
+
+### [CHECK] Verificação de Sucesso:
+- [ ] Backend rodando (`python backend/main.py`)
+- [ ] Frontend abrindo no navegador
+- [ ] Ponto de status está **Verde**
+- [ ] JSON aparece no rodapé e muda ao adicionar tarefas

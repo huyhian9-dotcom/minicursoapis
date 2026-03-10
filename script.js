@@ -7,6 +7,7 @@ const taskInput = document.getElementById('task-input');
 const addBtn = document.getElementById('add-btn');
 const statusDot = document.getElementById('status-dot');
 const statusText = document.getElementById('status-text');
+const jsonDisplay = document.getElementById('json-display');
 
 /**
  * MÉTODO GET (Buscar Dados)
@@ -17,6 +18,7 @@ async function fetchTasks() {
         const response = await fetch(`${API_URL}/tasks`); // Chamada padrão é GET
         const tasks = await response.json();
         renderTasks(tasks);
+        updateJsonPreview(tasks); // Mostra o JSON na tela
         updateStatus(true); // API está respondendo!
     } catch (error) {
         console.error('Erro ao buscar tarefas:', error);
@@ -106,6 +108,13 @@ function updateStatus(online) {
     } else {
         statusDot.classList.remove('online');
         statusText.innerText = 'Backend Offline (Inicie o main.py no Python)';
+    }
+}
+
+// Função para atualizar o visualizador de JSON
+function updateJsonPreview(data) {
+    if (jsonDisplay) {
+        jsonDisplay.innerText = JSON.stringify(data, null, 2);
     }
 }
 
