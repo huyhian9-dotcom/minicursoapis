@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Curso APIs - Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Task Manager API</h1>
+            <p>Mini Curso: Python + Frontend + Métodos HTTP</p>
+        </header>
+
+        <section class="api-status">
+            <span id="status-dot"></span>
+            <span id="status-text">Conectando à API...</span>
+        </section>
+
+        <section class="task-form">
+            <input type="text" id="task-input" placeholder="O que precisa ser feito?">
+            <button id="add-btn">Adicionar</button>
+        </section>
+
+        <section class="task-list-container">
+            <ul id="task-list">
+                <!-- As tarefas serão inseridas aqui via JS -->
+            </ul>
+        </section>
+
+        <footer>
+            <p>Métodos demonstrados: <span class="badge get">GET</span> <span class="badge post">POST</span> <span class="badge put">PUT</span> <span class="badge delete">DELETE</span></p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
