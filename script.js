@@ -8,6 +8,7 @@ const addBtn = document.getElementById('add-btn');
 const statusDot = document.getElementById('status-dot');
 const statusText = document.getElementById('status-text');
 const jsonDisplay = document.getElementById('json-display');
+let lastTasksSnapshot = '';
 
 /**
  * MÉTODO GET (Buscar Dados)
@@ -17,8 +18,14 @@ async function fetchTasks() {
     try {
         const response = await fetch(`${API_URL}/tasks`); // Chamada padrão é GET
         const tasks = await response.json();
-        renderTasks(tasks);
-        updateJsonPreview(tasks); // Mostra o JSON na tela
+
+        const currentTasksSnapshot = JSON.stringify(tasks);
+        if (currentTasksSnapshot !== lastTasksSnapshot) {
+            renderTasks(tasks);
+            updateJsonPreview(tasks); // Mostra o JSON na tela
+            lastTasksSnapshot = currentTasksSnapshot;
+        }
+
         updateStatus(true); // API está respondendo!
     } catch (error) {
         console.error('Erro ao buscar tarefas:', error);

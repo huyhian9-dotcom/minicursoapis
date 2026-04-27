@@ -88,20 +88,67 @@ Neste projeto, quando clicamos em botões na tela, o JavaScript conversa com a A
 
 ## 🏃 Como Rodar o Projeto
 
-### 1. Preparar o Backend
-Abra o terminal na pasta `backend` e instale as dependências:
+### 1. Preparar o ambiente virtual
+
+Na pasta principal do projeto, crie uma `.venv`:
+
 ```bash
-python -m pip install fastapi uvicorn
+python -m venv .venv
 ```
 
-Depois, inicie o servidor:
+Ative o ambiente virtual.
+
+No **PowerShell**:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+No **Git Bash**:
+
+```bash
+source .venv/Scripts/activate
+```
+
+Depois instale as dependências:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+### 2. Iniciar o Backend
+
+Entre na pasta `backend`:
+
+```bash
+cd backend
+```
+
+Depois inicie o servidor:
+
 ```bash
 python main.py
 ```
+
 O servidor estará rodando em: `http://localhost:8000`
 
-### 2. Abrir o Frontend
+Para testar a documentação automática da API, acesse:
+
+```text
+http://localhost:8000/docs
+```
+
+### 3. Abrir o Frontend
+
 Basta abrir o arquivo `index.html` diretamente no seu navegador.
+
+### Por que usar `.venv`?
+
+A `.venv` é um ambiente Python isolado para este projeto. Ela evita misturar as bibliotecas do minicurso com outras bibliotecas instaladas no computador.
+
+Para os alunos, uma boa explicação é:
+
+> A `.venv` é como uma caixinha do Python só para este projeto. Tudo que a API precisa fica dentro dela, sem bagunçar o Python principal da máquina.
 
 ---
 
