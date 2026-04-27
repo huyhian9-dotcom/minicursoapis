@@ -42,7 +42,7 @@ def get_tasks():
 def create_task(task: Task):
     """MÉTODO POST: Usado para CRIAR novas informações."""
     # Geramos um novo ID simples baseado no maior ID existente
-    new_id = max([t.id for t in db]) + 1 if db else 1
+    new_id = max((t.id or 0 for t in db), default=0) + 1
     task.id = new_id
     db.append(task)
     return task
