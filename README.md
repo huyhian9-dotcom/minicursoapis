@@ -92,6 +92,13 @@ Neste projeto, quando clicamos em botões na tela, o JavaScript conversa com a A
 
 Na pasta principal do projeto, crie uma `.venv`:
 
+GIT BASH: 
+python -m venv .venv
+source .venv/Scripts/activate
+python -m pip install -r requirements.txt
+
+
+
 ```bash
 python -m venv .venv
 ```
