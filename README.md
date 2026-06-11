@@ -1,3 +1,16 @@
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white" alt="FastAPI">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" alt="JavaScript">
+  <img src="https://img.shields.io/badge/Swagger-85EA2D?style=flat&logo=swagger&logoColor=black" alt="Swagger">
+</p>
+
+> **🇧🇷** Material didático de um mini curso de APIs: construir uma API com **FastAPI** e consumi-la num frontend moderno. · **🇺🇸** Teaching material from an APIs mini-course: build an API with **FastAPI** and consume it from a modern frontend.
+>
+> Parte do meu portfólio · Part of my portfolio — [@huyhian9-dotcom](https://github.com/huyhian9-dotcom)
+
+---
+
 # 🎓 Mini Curso de APIs: Python + Frontend
 
 Este repositório contém todo o código necessário para o **Mini Curso de APIs de 20 minutos**. Aprenda como criar uma API robusta com Python e integrá-la a uma interface moderna!
